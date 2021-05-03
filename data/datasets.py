@@ -50,9 +50,14 @@ class DeClareDataset(Dataset):
         # If vocabulary was previously built, load it
         if os.path.isfile(self.vocab_path) and os.path.isfile(self.vocab_vectors_path):
             print("Using pre-built vocabulary")
+            np_load_old = np.load
+            np.load = lambda *a,**k: np_load_old(*a, allow_pickle=True, **k)
+
             self.vocab = np.load(self.vocab_path).item()
             self.initial_embeddings = np.load(self.vocab_vectors_path)
             self.unk_index = self.vocab['unk']
+            np.load = np_load_old
+
 
         else:
             print("Building vocabulary. This could take a while..")
