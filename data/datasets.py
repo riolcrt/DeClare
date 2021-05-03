@@ -125,7 +125,7 @@ class DeClareDataset(Dataset):
         self.article_source_vocab['unk'] = self.article_unk_index
 
     def _vec(self, w):
-        return self.glove_df.loc[w].as_matrix()
+        return self.glove_df.loc[w].values
 
     def __len__(self):
         return len(self.news_df)
