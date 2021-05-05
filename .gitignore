@@ -260,3 +260,7 @@ Datasets/Politifact/*.npy
 __pycache__/
 
 .DS_Store
+
+
+demo_model
+runs/
