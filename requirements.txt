@@ -57,6 +57,7 @@ libprotobuf=3.15.8=h7755175_0
 libsodium=1.0.18=h8d14728_1
 libtiff=4.2.0=hc10be44_1
 lz4-c=1.9.3=h8ffe710_0
+ipywidgets==7.6.3
 markupsafe=1.1.1=py37hcc03f2d_3
 matplotlib=3.4.1=py37h03978a9_0
 matplotlib-base=3.4.1=py37h0d1fb12_0
